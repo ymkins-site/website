@@ -6,7 +6,7 @@
     ul, li {list-style:none;}
     a {text-decoration:none;}
 
-#map {display:flex;height:500px;flex-direction:row;background-color:aqua;}
+#map {display:flex;min-height:500px;flex-direction:row;background-color:aqua;}
 #map .mapWrap {width:50%;height:inherit;}
 #map .info {width:50%;height:inherit;background-image:url('map_bg.png');background-size:cover;position:relative;isolation:isolate;}
 #map .info::after {content:'';position:absolute;background:white;z-index:-1;inset:0;opacity:0.6;}
@@ -26,13 +26,14 @@
 #map .infobox > div {color:#FFF;font-size:16px;font-weight:300;text-shadow:2px 2px 2px black;}
 
 #map .info1 .tel::after {content:'';height:100%;width:1px;background-color:#FFF;position:absolute;top:0;right:0;}
-
+#map .mapWrap .wrap_controllers {display:none;}
+#map .mapWrap .cont {display:none;}
 /* width 1000 이하 */
 @media screen and (max-width:1000px) {
-    #map {height:700px;flex-direction:column;}
-    #map .mapWrap {height:350px;}
+    #map {flex-direction:column;}
+    #map .mapWrap { width:100%;}
 
-    #map .info {height:350px;}
+    #map .info {width:100%;height:350px;}
     #map .infoWrap {padding:0 30px;}
     #map .info1 {padding:20px 0;}
     #map .info2 {padding:20px 0;}
