@@ -1,0 +1,70 @@
+
+<style>
+    * {margin:0px;padding:0px;box-sizing:border-box;color:hsl(0, 0%, 0%);}
+    ul, li {list-style:none;}
+    a {text-decoration:none;}
+
+footer {width:100%; background-color:#eaeaea; clear:both; position: relative;}
+footer .footer_con {width: 100%; max-width: 1300px; padding: 60px 50px; margin: 0 auto;}
+footer .footer_con .top {width: 100%; margin-bottom: 30px; padding-bottom: 30px; border-bottom:1px solid #ccc;}
+footer .footer_con .menu {display: flex; align-items: center;}
+footer .footer_con .menu .li {display:flex;align-items: center;}
+footer .footer_con .menu .li a {font-size:16px;font-weight:500;}
+footer .footer_con .menu .li::after {width: 1px; height: 12px; background: #969696; display: inline-block; content: ""; margin: 0 42px; }
+footer .footer_con .menu .li:first-child::after {background-color:transparent;}
+footer .footer_con .menu .li:last-child::after {display: none;}
+footer .btm {display:flex;flex-direction: row;    justify-content: space-between;}
+footer .info {display:flex;flex-direction:column;}
+footer .company {display:flex;font-size: 13px; font-weight: 700; color: #2e2e2e;flex-direction:row; }
+footer .company div {display:flex;height:20px;}
+footer .company div::after {width: 2px; height: 14px; background: #2e2e2e; display: inline-block; content: ""; margin: 0 15px; }
+footer .company div:last-child::after {display: none;}
+footer .addr {font-size: 13px; font-weight: 700; color: #2e2e2e; margin-top:5px; }
+footer .copyright {font-size: 13px; font-weight: 700; color:#a1a1a1;   display: block; margin-top: 15px;}
+footer .logo img {width:auto;max-height:40px;}
+
+/* width 1000 이하 */
+@media screen and (max-width: 1000px) {
+    footer .footer_con {padding:30px 20px;text-align:center;}
+    footer .footer_con .menu { flex-direction: column;}
+    footer .footer_con .menu .li {padding:3px 0px;}
+    footer .footer_con .menu .li:first-child {margin-bottom:20px;}
+    footer .footer_con .menu .li::after {display:none;}
+    footer .btm {flex-direction:column;align-items: center;}
+    footer .info {margin-bottom:30px;}  
+}
+</style>
+
+<footer>
+    <div class="footer_con">
+        <div class="top">
+            <div class="menu">
+                <div class="li">
+                    <a href="/" class="logo">
+                        <img src="logo_trans.png">
+                    </a>
+                </div>
+                <div class="li">
+                    <a href="tel:01063471227">Mobile. 010-6347-1227</a>
+                </div>
+                <div class="li">
+                    <a href="javascript:;" style="cursor:default;">Fax. 031-663-1227</a>
+                </div>
+                <div class="li">
+                    <a href="mailto:ymk@ymkins.kr">E-mail. ymk@ymkins.kr</a>
+                </div>
+            </div>
+        </div>
+        <div class="btm">
+            <div class="info">
+                <div class="company">
+                    <div>주식회사 와이엠케이</div>
+                    <div>대표이사 : 고영민</div>
+                    <div>사업자등록번호 :  276-87-03357</div>
+                </div>
+                <div class="addr">주소 : 경기도 평택시 고덕면 도시지원1길 52, 309호</div>
+                <span class="copyright">COPYRIGHT 주식회사 와이엠케이 All rights reserved</a></span>
+            </div>
+        </div>
+    </div>
+</footer>
