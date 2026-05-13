@@ -1,0 +1,78 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/fontawesome.min.css" integrity="sha512-M5Kq4YVQrjg5c2wsZSn27Dkfm/2ALfxmun0vUE3mPiJyK53hQBHYCVAtvMYEC7ZXmYLg8DVG4tF8gD27WmDbsg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/solid.min.css" integrity="sha512-EHa6vH03/Ty92WahM0/tet1Qicl76zihDCkBnFhN3kFGQkC+mc86d7V+6y2ypiLbk3h0beZAGdUpzfMcb06cMg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+    * {margin:0px;padding:0px;box-sizing:border-box;}
+    ul, li {list-style:none;}
+    a {text-decoration:none;}
+
+#map {display:flex;height:500px;flex-direction:row;background-color:aqua;}
+#map .mapWrap {width:50%;height:inherit;}
+#map .info {width:50%;height:inherit;background-image:url('map_bg.jpg');background-size:cover;position:relative;isolation:isolate;}
+#map .info::after {content:'';position:absolute;background:white;z-index:-1;inset:0;opacity:0.6;}
+#map .infoWrap {display:flex;flex-direction:column;width:100%;height:100%; position:relative;isolation:isolate;padding:50px;}
+#map .infoWrap::after {content:'';position:absolute;background:#011570;z-index:-1;inset:0;opacity:0.7;}
+
+#map .info span {font-size:15px;font-weight:500;color:#FFF;}
+#map .info i {font-size:40px;color:#FFF;text-shadow:2px 2px 2px black;}
+
+#map .info1 {display:flex;flex-direction:row;position:relative;padding:30px 0; flex:0 0 50%;}
+#map .info1::after {content:'';height:1px;width:100%;background-color:#FFF;position:absolute;bottom:0;left:0;}
+#map .info2 {height:250px;display:flex; flex:0 0 50%;}
+
+#map .infobox {position:relative;display:flex;flex-direction:column;width:100%;align-items:center;justify-content:center;} 
+#map .infobox > span {color:#FFF;font-size:20px;font-weight:500;margin:20px 0;text-shadow:2px 2px 2px black;}
+#map .infobox > a {color:#FFF;font-size:16px;font-weight:300;text-shadow:2px 2px 2px black;}
+#map .infobox > div {color:#FFF;font-size:16px;font-weight:300;text-shadow:2px 2px 2px black;}
+
+#map .info1 .tel::after {content:'';height:100%;width:1px;background-color:#FFF;position:absolute;top:0;right:0;}
+
+/* width 1000 이하 */
+@media screen and (max-width:1000px) {
+    #map {height:700px;flex-direction:column;}
+    #map .mapWrap {height:350px;}
+
+    #map .info {height:350px;}
+    #map .infoWrap {padding:0 30px;}
+    #map .info1 {padding:20px 0;}
+    #map .info2 {padding:20px 0;}
+}
+</style>
+
+<div id="map"> 
+    <div class="mapWrap">
+        <div id="daumRoughmapContainer1778661321676" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+    </div>
+
+    <div class="info">
+        <div class="infoWrap">
+            <div class="info1">
+                <div class="tel infobox">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>TEL</span>
+                    <a href="tel:01063471227">Mobile. 010-6347-1227</a>
+                </div>
+                <div class="fax infobox">
+                    <i class="fa-solid fa-fax"></i>
+                    <span>FAX</span>
+                    <a href="javascript:;" style="cursor:default;">Fax. 031-663-1227</a>
+                </div>
+            </div>
+
+            <div class="info2 infobox">
+                <i class="fa-solid fa-map-location-dot"></i>
+                <span>ADDRESS</span>
+                <div class="addr">주소 : 경기도 평택시 고덕면 도시지원1길 52, 309호</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+<script charset="UTF-8">
+	new daum.roughmap.Lander({
+		"timestamp" :"1778661321676",
+		"key" :"2p5y5fmhcpkg", 
+		"mapHeight" :"500"
+	}).render();
+</script>
